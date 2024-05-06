@@ -9,24 +9,30 @@ namespace prep3
             Console.WriteLine("What is the magic number ?");
             string magicNumber = Console.ReadLine();
 
-            Console.WriteLine("What is your guess?");
-            string guess = Console.ReadLine();
-
-            int x = int.Parse(guess);
             int y = int.Parse(magicNumber);
 
-            if (x > y)
+            int x = 0;
+
+            while (x != y)
             {
-                Console.WriteLine("Lower");
+                Console.WriteLine("What is you guess?");
+                x = int.Parse(Console.ReadLine());
+
+                if (y > x)
+                {
+                    Console.WriteLine("Higher");
+                }
+                else if (y < x)
+                {
+                    Console.WriteLine("Lower");
+                }
+                else
+                {
+                    Console.WriteLine("You guessed it!");
+                }
             }
-            else if (x < y)
-            {
-                Console.WriteLine("Higher")
-            }
-            else
-            {
-                Console.WriteLine("You get it")
-            }
+
+
             
         }
     }
