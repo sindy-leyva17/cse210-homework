@@ -6,12 +6,10 @@ namespace prep3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is the magic number ?");
-            string magicNumber = Console.ReadLine();
+            Random randomGenerator = new Random();
+            int y = randomGenerator.Next(1, 101);
 
-            int y = int.Parse(magicNumber);
-
-            int x = 0;
+            int x = -1;
 
             while (x != y)
             {
