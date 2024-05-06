@@ -11,26 +11,30 @@ namespace prep2
 
             int x = int.Parse(valueFromUser);
 
+            string letter = "";
+
             if (x >= 90)
             {
-                Console.WriteLine("You got an A");
+                letter ="A";
             }
             else if (x >= 80)
             {
-                Console.WriteLine("You got a B");
+                letter ="B";
             }
             else if (x >= 70)
             {
-                Console.WriteLine("You got a C");
+                letter ="C";
             }
             else if (x >= 60)
             {
-                Console.WriteLine("You got a D");
+                letter ="D";
             }
-            else if (x < 60)
+            else 
             {
-                Console.WriteLine("You got a F");
+                letter ="F";
             }
+            Console.WriteLine($"You got a {letter}");
+
             if (x >= 90 || x >= 80 || x >= 70)
             {
                 Console.WriteLine("Congratulations, you pass.");
